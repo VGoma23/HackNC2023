@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://dswo3rdxngvnl"]
+
+[ext_resource type="Texture2D" uid="uid://kmewecafxi1n" path="res://Objects/Basic Plants.png" id="1_7l2cd"]
+[ext_resource type="Script" path="res://Scripts/plant.gd" id="1_hlue8"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bm62k"]
+radius = 4.0
+height = 16.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_b1o3f"]
+radius = 20.0
+
+[node name="Plant" type="StaticBody2D"]
+script = ExtResource("1_hlue8")
+
+[node name="CollisionBox" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 4)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_bm62k")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_7l2cd")
+hframes = 6
+vframes = 2
+frame = 1
+
+[node name="InteractionArea" type="Area2D" parent="."]
+
+[node name="InteractionShape" type="CollisionShape2D" parent="InteractionArea"]
+position = Vector2(0, 3)
+shape = SubResource("CircleShape2D_b1o3f")
