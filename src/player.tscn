@@ -236,7 +236,7 @@ transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition
 script = ExtResource("1_bunp3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-z_index = 10
+top_level = true
 position = Vector2(0, 6)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_bytve")
