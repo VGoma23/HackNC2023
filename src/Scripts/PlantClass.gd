@@ -46,7 +46,9 @@ var days_in_month = {
 	12: 31  # December
 }
 
+
 func days_between(date1: Dictionary, date2: Dictionary) -> int:
+
 	var days_date1 = date1["day"]
 	var month1 = date1["month"]
 	var year1 = date1["year"]
@@ -57,23 +59,27 @@ func days_between(date1: Dictionary, date2: Dictionary) -> int:
 
 	var days_count = 0
 
-	# Calculate days from the start of the first year to the start of the second year
-	for year in range(year1 + 1, year2 - 1):
-		for month in range(1, 12):
-			days_count += days_in_month[month]
-
-	# Calculate days remaining in the starting year
-	for month in range(month1, 12):
+	# Calculate days for the starting year
+	var month = month1
+	while month <= 12:
 		if month == month1:
 			days_count += days_in_month[month] - days_date1
 		else:
 			days_count += days_in_month[month]
+		month += 1
 
-	# Calculate days elapsed in the ending year
-	for month in range(1, month2-1):
-		if month == month2 - 1:
-			days_count += days_date2
-		else:
-			days_count += days_in_month[month]
+	# If the dates are in the same year, return the calculated days
+	if year1 == year2:
+		if month1 == month2:
+			return days_date2 - days_date1
+		return days_count
 
-	return days_count
+	# Add days for the remaining months of the starting year
+	var remaining_days = days_date2
+	var remaining_months = month2 - 1
+	while remaining_months > 0:
+		remaining_days += days_in_month[remaining_months]
+		remaining_months -= 1
+
+	# Days left in the first year + days in the last year + days for full years in between
+	return days_count + remaining_days

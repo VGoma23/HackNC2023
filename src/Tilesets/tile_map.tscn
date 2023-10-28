@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c0krku52pgcqe"]
+
+[ext_resource type="TileSet" uid="uid://cjg3l2wfuyuuy" path="res://Tilesets/grassTileSet.tres" id="1_v7cut"]
+
+[node name="TileMap" type="TileMap"]
+position = Vector2(114, 80)
+tile_set = ExtResource("1_v7cut")
+format = 2
