@@ -9,7 +9,6 @@ var animationPlayer = null
 var animationTree = null
 var animationState = null
 
-
 @onready var sprite = $Sprite2D
 
 
