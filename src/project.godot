@@ -15,6 +15,15 @@ run/main_scene="res://farm.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/viewport_width=144
+window/size/viewport_height=256
+window/size/window_width_override=576
+window/size/window_height_override=1024
+window/stretch/mode="viewport"
+window/handheld/orientation=1
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
