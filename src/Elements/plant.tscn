@@ -17,6 +17,7 @@ script = ExtResource("1_hlue8")
 position = Vector2(-1, 4)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_bm62k")
+debug_color = Color(0.94902, 0, 0.572549, 0.419608)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_7l2cd")
@@ -29,3 +30,6 @@ frame = 1
 [node name="InteractionShape" type="CollisionShape2D" parent="InteractionArea"]
 position = Vector2(0, 3)
 shape = SubResource("CircleShape2D_b1o3f")
+
+[connection signal="area_entered" from="InteractionArea" to="." method="_on_interaction_area_area_entered"]
+[connection signal="area_exited" from="InteractionArea" to="." method="_on_interaction_area_area_exited"]
