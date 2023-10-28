@@ -20,8 +20,13 @@ func initialize(plant):
 	else:
 		sprite.modulate = "AAAAAA"
 	
-func _ready():
-	pass
+func _physics_process(delta):
+	if not isPlayerInArea:
+		return
+	if Input.is_action_just_pressed("ui_select") or Input.is_action_just_pressed("ui_accept"):
+		print("watering")
+		water()
+	
 	
 func water():
 	plantData = Plant.new(plantData.plantName, Time.get_datetime_string_from_system(), plantData.wateringInterval)
@@ -39,3 +44,14 @@ func _on_interaction_area_area_entered(area):
 func _on_interaction_area_area_exited(area):
 	isPlayerInArea = false
 	print("area exited!")
+
+
+
+func _on_interaction_area_body_entered(body):
+	pass
+
+
+
+func _on_interaction_area_body_exited(body):
+	pass
+	
