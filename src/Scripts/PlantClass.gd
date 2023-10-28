@@ -4,6 +4,7 @@ extends Object
 var lastWateredDate: String
 var wateringInterval: int
 var plantName: String
+
 @export var DEV_DAY_OFFSET = 0
 
 func _init(plant_name, last_watered, watering_interval):

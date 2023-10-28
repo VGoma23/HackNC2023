@@ -10,7 +10,8 @@ var isPlayerInArea = false
 signal playerEnteredPlantArea(plant)
 signal playerExitedPlantArea(plant)
 
-
+func _ready():
+	initialize(Plant.new("test", Time.get_datetime_string_from_system(), 3))
 
 func initialize(plant):
 	plantData = plant
