@@ -371,6 +371,7 @@ anim_player = NodePath("../AnimationPlayer")
 parameters/Idle/blend_position = Vector2(0.7248, -0.465939)
 parameters/Walk/blend_position = Vector2(0, 0)
 
+
 [node name="Interact Node" type="Node2D" parent="."]
 position = Vector2(0, 6)
 
