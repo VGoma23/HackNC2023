@@ -3,11 +3,19 @@ extends Object
 
 var lastWateredDate: String
 var wateringInterval: int
+var plantName: String
 @export var DEV_DAY_OFFSET = 0
 
-func _init(last_watered, watering_interval):
+func _init(plant_name, last_watered, watering_interval):
 	lastWateredDate = last_watered
 	wateringInterval = watering_interval
+	plantName = plant_name
+
+func toJSON():
+	pass
+func createFromJSON():
+	pass
+
 	
 func isThirsty():
 	var lastWateredDict = Time.get_datetime_dict_from_datetime_string(lastWateredDate, false)
