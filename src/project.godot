@@ -24,6 +24,11 @@ window/size/window_height_override=1024
 window/stretch/mode="viewport"
 window/handheld/orientation=1
 
+[layer_names]
+
+2d_physics/layer_1="World Collision"
+2d_physics/layer_2="Interactible"
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
