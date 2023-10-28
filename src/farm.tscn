@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://58ifcrrvp672"]
+[gd_scene load_steps=2 format=3 uid="uid://bqusto2s8rqnc"]
 
-[ext_resource type="PackedScene" uid="uid://bv3iptxxxmaw8" path="res://player.tscn" id="1_pv1ar"]
+[ext_resource type="PackedScene" uid="uid://ceo8g0sxdlxjl" path="res://player.tscn" id="1_pv1ar"]
 
 [node name="Farm" type="Node2D"]
 
