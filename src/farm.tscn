@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://bv3iptxxxmaw8" path="res://player.tscn" id="1_pv1ar"]
 [ext_resource type="PackedScene" uid="uid://dswo3rdxngvnl" path="res://Elements/plant.tscn" id="2_vcp80"]
 
-
 [node name="Farm" type="Node2D"]
 
 [node name="TileMap" parent="." instance=ExtResource("1_25fxa")]
@@ -21,6 +20,7 @@ layer_1/tile_data = PackedInt32Array(-262150, 131074, 3, -262149, 131074, 3, -26
 [node name="YSortNode" type="Node2D" parent="."]
 
 [node name="Player" parent="YSortNode" instance=ExtResource("1_pv1ar")]
+position = Vector2(68, 69)
 
 [node name="Plant" parent="YSortNode" instance=ExtResource("2_vcp80")]
 position = Vector2(51, 28)
