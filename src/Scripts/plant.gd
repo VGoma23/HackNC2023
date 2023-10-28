@@ -5,10 +5,6 @@ const Plant = preload("res://Scripts/PlantClass.gd")
 
 var plantData: Plant
 
-# how often a plant needs to be watered
-func _init():
-	pass
-	
 
 func initialize(plant):
 	plantData = plant
@@ -17,3 +13,10 @@ func initialize(plant):
 func _ready():
 	pass
 	
+	
+func water():
+	plantData = Plant.new(plantData.plantName, Time.get_datetime_string_from_system(), plantData.wateringInterval)
+	initialize(plantData)
+
+func getPlantData():
+	return plantData
