@@ -38,6 +38,7 @@ func initialize(plant):
 	global_position.x = plant.positionX
 	global_position.y = plant.positionY
 	
+	
 func _physics_process(delta):
 	if not isPlayerInArea:
 		return
@@ -52,6 +53,9 @@ func water():
 	plantData = Plant.new(plantData.plantName, Time.get_datetime_string_from_system(), global_position.x, global_position.y, plantData.numTimesWatered + 1, plantData.cuteName)
 	initialize(plantData)
 	farm.saveAllPlantData()
+	var asp = $AudioStreamPlayer
+	asp.play()
+	
 
 func getPlantData():
 	return plantData
