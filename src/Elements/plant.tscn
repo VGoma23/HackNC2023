@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dswo3rdxngvnl"]
+[gd_scene load_steps=7 format=3 uid="uid://dswo3rdxngvnl"]
 
 [ext_resource type="Texture2D" uid="uid://kmewecafxi1n" path="res://Objects/Basic Plants.png" id="1_7l2cd"]
 [ext_resource type="Script" path="res://Scripts/plant.gd" id="1_hlue8"]
 [ext_resource type="Script" path="res://Scripts/InteractionArea.gd" id="3_lkv8g"]
+[ext_resource type="AudioStream" uid="uid://d23y0bqcbv5px" path="res://Sound/Bubble 1.wav" id="4_w1p0o"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bm62k"]
 radius = 4.0
@@ -37,6 +38,9 @@ script = ExtResource("3_lkv8g")
 [node name="InteractionShape" type="CollisionShape2D" parent="InteractionArea"]
 position = Vector2(0, 3)
 shape = SubResource("CircleShape2D_b1o3f")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_w1p0o")
 
 [connection signal="area_entered" from="InteractionArea" to="." method="_on_interaction_area_area_entered"]
 [connection signal="area_exited" from="InteractionArea" to="." method="_on_interaction_area_area_exited"]
