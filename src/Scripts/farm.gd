@@ -16,9 +16,8 @@ var tips = ["Did you know that apples, cherries, and peaches are part of the ros
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	# TODO THIS IS A TEST
-	saveAllPlantData()
-	load_game()
+	pass
+	#load_game()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

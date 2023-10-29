@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dswo3rdxngvnl"]
+[gd_scene load_steps=6 format=3 uid="uid://dswo3rdxngvnl"]
 
 [ext_resource type="Texture2D" uid="uid://kmewecafxi1n" path="res://Objects/Basic Plants.png" id="1_7l2cd"]
 [ext_resource type="Script" path="res://Scripts/plant.gd" id="1_hlue8"]
+[ext_resource type="Script" path="res://Scripts/InteractionArea.gd" id="3_lkv8g"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bm62k"]
 radius = 4.0
@@ -31,6 +32,7 @@ frame = 1
 position = Vector2(0, -3)
 collision_layer = 7
 collision_mask = 7
+script = ExtResource("3_lkv8g")
 
 [node name="InteractionShape" type="CollisionShape2D" parent="InteractionArea"]
 position = Vector2(0, 3)
