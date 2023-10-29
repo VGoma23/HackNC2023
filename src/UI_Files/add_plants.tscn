@@ -1,10 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://c2htfkkj57iyw"]
+[gd_scene load_steps=7 format=3 uid="uid://d02r6515v2dtq"]
 
+[ext_resource type="Script" path="res://UI_Files/add_plants_scn.gd" id="1_12x8v"]
 [ext_resource type="FontFile" uid="uid://b5x7qq72w6l08" path="res://Fonts/upheavtt.ttf" id="1_kcyxm"]
 [ext_resource type="Script" path="res://UI_Files/add_plants.gd" id="2_b1imp"]
 [ext_resource type="Script" path="res://UI_Files/exit_picker.gd" id="2_v6vv2"]
+[ext_resource type="FontFile" uid="uid://be4btiktqbfji" path="res://Fonts/Retro Gaming.ttf" id="5_oskkg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k1ppa"]
+bg_color = Color(0.305882, 0.337255, 0.192157, 1)
 
 [node name="add_plants" type="Node2D"]
+script = ExtResource("1_12x8v")
 
 [node name="background" type="Node2D" parent="."]
 
@@ -31,9 +37,9 @@ position = Vector2(0, 300)
 
 [node name="add_button" type="MenuButton" parent="UI/menu_buttons"]
 offset_left = 47.0
-offset_top = -122.0
+offset_top = -55.0
 offset_right = 547.0
-offset_bottom = -42.0
+offset_bottom = 25.0
 theme_override_colors/font_color = Color(0.298039, 0.337255, 0.172549, 1)
 theme_override_fonts/font = ExtResource("1_kcyxm")
 theme_override_font_sizes/font_size = 80
@@ -83,15 +89,27 @@ popup/item_19/id = 19
 script = ExtResource("2_b1imp")
 
 [node name="home" type="Button" parent="UI/menu_buttons"]
-offset_left = 64.0
-offset_top = 588.0
-offset_right = 514.0
-offset_bottom = 688.0
+offset_left = 62.0
+offset_top = 619.0
+offset_right = 512.0
+offset_bottom = 719.0
 theme_override_colors/font_color = Color(0.298039, 0.337255, 0.172549, 1)
 theme_override_fonts/font = ExtResource("1_kcyxm")
-theme_override_font_sizes/font_size = 80
-text = "HOME"
+theme_override_font_sizes/font_size = 40
+text = "back"
 flat = true
 script = ExtResource("2_v6vv2")
 
+[node name="TextEdit" type="TextEdit" parent="UI"]
+offset_left = 100.0
+offset_top = 183.0
+offset_right = 482.0
+offset_bottom = 242.0
+theme_override_fonts/font = ExtResource("5_oskkg")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_k1ppa")
+placeholder_text = " Name Your Plant"
+
+[connection signal="send_veggie" from="UI/menu_buttons/add_button" to="." method="_on_add_button_send_veggie"]
 [connection signal="button_down" from="UI/menu_buttons/home" to="UI/menu_buttons/home" method="_on_button_down"]
+[connection signal="hide_self" from="UI/menu_buttons/home" to="." method="_on_home_hide_self"]

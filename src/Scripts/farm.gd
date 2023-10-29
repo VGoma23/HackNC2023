@@ -2,13 +2,13 @@ extends Node2D
 
 
 var Plant = preload("res://Scripts/PlantClass.gd")
+var previousPosition: Vector2
 
 
-
+@onready var addPlantMenu = $CanvasLayer/add_plants
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
 	load_game()
 
 
@@ -69,13 +69,12 @@ func load_game():
 		new_object.initialize(plantData)
 
 func _on_player_create_plant(_position):
-	var plantData = Plant.new("tomatoes", "2022-10-1111:11:11", _position.x, _position.y)
-	var new_plant = load("res://Elements/plant.tscn").instantiate()
+	
 
-	$YSortNode/Plants.add_child(new_plant)
-	new_plant.initialize(plantData)
-	saveAllPlantData()
-	print("plant made")
+	addPlantMenu.show_menu()
+	previousPosition = _position
+
+
 
 
 # input stuff raaahhhh
@@ -105,3 +104,12 @@ func _unhandled_input(event):
 		joystickInputVec = joystickInputVec.limit_length(maxLength) / maxLength
 		print(joystickInputVec)
 		player.input_vector = joystickInputVec
+
+
+func _on_add_plants_send_veggie(veggie_name, cuteName):
+	var plantData = Plant.new(veggie_name, Time.get_datetime_string_from_system(), previousPosition.x, previousPosition.y, 0, cuteName)
+	var new_plant = load("res://Elements/plant.tscn").instantiate()
+	$YSortNode/Plants.add_child(new_plant)
+	new_plant.initialize(plantData)
+	saveAllPlantData()
+	print("plant made")
