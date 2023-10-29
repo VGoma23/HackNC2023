@@ -49,7 +49,8 @@ func toJSON():
 		"numTimesWatered": numTimesWatered,
 		"plantName": plantName,
 		"positionX": positionX,
-		"positionY": positionY
+		"positionY": positionY,
+		"DEV_DAY_OFFSET": DEV_DAY_OFFSET
 	}
 	return data_to_save
 	

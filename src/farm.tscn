@@ -11,7 +11,7 @@
 [ext_resource type="Script" path="res://UI_Files/exit_to_homepage.gd" id="6_14odi"]
 [ext_resource type="Script" path="res://Scripts/NameLabel.gd" id="6_bw6y3"]
 [ext_resource type="PackedScene" uid="uid://pad3fg68on2d" path="res://tip_of_the_day.tscn" id="6_e3pu7"]
-[ext_resource type="PackedScene" path="res://action_button.tscn" id="9_bp1af"]
+[ext_resource type="PackedScene" uid="uid://dr2fmwl455gpn" path="res://action_button.tscn" id="9_bp1af"]
 
 [node name="Farm" type="Node2D"]
 scale = Vector2(4, 4)
