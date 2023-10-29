@@ -66,6 +66,8 @@ func load_game():
 				continue
 			plantData.set(i, node_data[i])
 		new_object.initialize(plantData)
+		var asp = $AudioStreamPlayer
+		asp.play()
 
 func _on_player_create_plant(_position):
 	var plantData = Plant.new("tomatoes", "2022-10-1111:11:11", _position.x, _position.y)
