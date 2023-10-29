@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://c32fnq0ety8sp"
+=======
+uid="uid://bfjtsi2s68hhm"
+>>>>>>> b233ae5c06ee1ea16808aad13722ca117beab41a
 path="res://.godot/imported/potatoes.jpg-18034a7e186e8a060fa7b6196e15a5d8.ctex"
 metadata={
 "vram_texture": false

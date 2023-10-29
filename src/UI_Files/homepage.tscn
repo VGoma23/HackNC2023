@@ -1,0 +1,57 @@
+[gd_scene load_steps=4 format=3 uid="uid://d2c4gpyc7l7fd"]
+
+[ext_resource type="FontFile" uid="uid://b5x7qq72w6l08" path="res://Fonts/upheavtt.ttf" id="1_orbpg"]
+[ext_resource type="Script" path="res://UI_Files/start_game.gd" id="2_dvn5y"]
+[ext_resource type="Script" path="res://UI_Files/go_plant_data.gd" id="3_ypuxd"]
+
+[node name="homepage" type="Node2D"]
+
+[node name="background" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="background"]
+offset_right = 576.0
+offset_bottom = 1024.0
+color = Color(0.854902, 0.94902, 0.815686, 1)
+
+[node name="UI" type="Node2D" parent="."]
+
+[node name="title" type="Label" parent="UI"]
+offset_top = 300.0
+offset_right = 576.0
+offset_bottom = 384.0
+theme_override_colors/font_color = Color(0.298039, 0.337255, 0.172549, 1)
+theme_override_fonts/font = ExtResource("1_orbpg")
+theme_override_font_sizes/font_size = 60
+text = "PLACEHOLDER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="menu_buttons" type="Node2D" parent="UI"]
+position = Vector2(0, 300)
+
+[node name="start" type="Button" parent="UI/menu_buttons"]
+offset_top = 100.0
+offset_right = 576.0
+offset_bottom = 167.0
+theme_override_colors/font_color = Color(0, 0.596078, 0, 1)
+theme_override_colors/font_hover_color = Color(0.392157, 0.47451, 0, 1)
+theme_override_fonts/font = ExtResource("1_orbpg")
+theme_override_font_sizes/font_size = 40
+text = "Start"
+flat = true
+script = ExtResource("2_dvn5y")
+
+[node name="plant_data" type="Button" parent="UI/menu_buttons"]
+offset_top = 160.0
+offset_right = 576.0
+offset_bottom = 227.0
+theme_override_colors/font_color = Color(0, 0.596078, 0, 1)
+theme_override_colors/font_hover_color = Color(0.392157, 0.47451, 0, 1)
+theme_override_fonts/font = ExtResource("1_orbpg")
+theme_override_font_sizes/font_size = 40
+text = "Plant Data"
+flat = true
+script = ExtResource("3_ypuxd")
+
+[connection signal="button_down" from="UI/menu_buttons/start" to="UI/menu_buttons/start" method="_on_button_down"]
+[connection signal="button_down" from="UI/menu_buttons/plant_data" to="UI/menu_buttons/start" method="_on_plant_data_button_down"]

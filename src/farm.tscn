@@ -1,12 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://58ifcrrvp672"]
+[gd_scene load_steps=9 format=3 uid="uid://58ifcrrvp672"]
 
 [ext_resource type="PackedScene" uid="uid://c0krku52pgcqe" path="res://Tilesets/tile_map.tscn" id="1_25fxa"]
 [ext_resource type="PackedScene" uid="uid://bv3iptxxxmaw8" path="res://player.tscn" id="1_pv1ar"]
 [ext_resource type="Script" path="res://Scripts/farm.gd" id="1_sn0f3"]
 [ext_resource type="AudioStream" uid="uid://dr0hr3nm83m21" path="res://Sound/sakura-hz-watching-anime.mp3" id="4_p0io2"]
-[ext_resource type="FontFile" uid="uid://du3w1itqrhv4t" path="res://Fonts/Retro Gaming.ttf" id="5_lqamn"]
+[ext_resource type="FontFile" path="res://Fonts/Retro Gaming.ttf" id="5_lqamn"]
 [ext_resource type="Texture2D" uid="uid://c0hfwrxu3rgkm" path="res://Objects/Egg item.png" id="5_od1x2"]
 [ext_resource type="Script" path="res://Scripts/NameLabel.gd" id="6_bw6y3"]
+[ext_resource type="PackedScene" uid="uid://pad3fg68on2d" path="res://tip_of_the_day.tscn" id="6_e3pu7"]
 
 [node name="Farm" type="Node2D"]
 scale = Vector2(4, 4)
@@ -41,6 +42,9 @@ theme_override_fonts/font = ExtResource("5_lqamn")
 theme_override_font_sizes/font_size = 40
 text = "asdfasdfasdf"
 script = ExtResource("6_bw6y3")
+
+[node name="TipOfTheDay" parent="CanvasLayer" instance=ExtResource("6_e3pu7")]
+position = Vector2(-30, 69)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_p0io2")

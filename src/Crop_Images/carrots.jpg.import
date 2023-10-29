@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://b01ah0oviatlp"
+=======
+uid="uid://bo20fdj7wgb5l"
+>>>>>>> b233ae5c06ee1ea16808aad13722ca117beab41a
 path="res://.godot/imported/carrots.jpg-74156e0c9b86cdbbce1e1743e09c877e.ctex"
 metadata={
 "vram_texture": false

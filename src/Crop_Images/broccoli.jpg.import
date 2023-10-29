@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://dxi6yiax5h2e4"
+=======
+uid="uid://ofindmkxuhd"
+>>>>>>> b233ae5c06ee1ea16808aad13722ca117beab41a
 path="res://.godot/imported/broccoli.jpg-cfa86fc01fc5d572935bc8a10d123213.ctex"
 metadata={
 "vram_texture": false
