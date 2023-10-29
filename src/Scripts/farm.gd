@@ -66,9 +66,12 @@ func load_game():
 		new_object.initialize(plantData)
 
 func _on_player_create_plant(_position):
-	var plantData = Plant.new("test", "2022-10-1111:11:11", 3, _position.x, _position.y)
+	var plantData = Plant.new("tomatoes", "2022-10-1111:11:11", _position.x, _position.y)
 	var new_plant = load("res://Elements/plant.tscn").instantiate()
 
 	$YSortNode/Plants.add_child(new_plant)
 	new_plant.initialize(plantData)
+	saveAllPlantData()
 	print("plant made")
+
+

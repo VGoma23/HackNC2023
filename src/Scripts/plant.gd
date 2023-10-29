@@ -19,13 +19,11 @@ signal expandPlantUI(plant)
 
 func _ready():
 	expandPlantUI.connect(farm.inspectPlantUI)
-	print(global_position)
 	initialize(Plant.new("test", "2022-10-1111:11:11", 3, global_position.x, global_position.y)) # TODO replace
 	
 
 func initialize(plant):
 	plantData = plant
-	
 	# do more stuff based on this
 	if plantData.isThirsty():
 		sprite.modulate = "c56204"
@@ -45,7 +43,7 @@ func _physics_process(delta):
 		expandPlantUI.emit(plantData)
 	
 func water():
-	plantData = Plant.new(plantData.plantName, Time.get_datetime_string_from_system(), plantData.wateringInterval, global_position.x, global_position.y, plantData.numTimesWatered + 1, plantData.cuteName)
+	plantData = Plant.new(plantData.plantName, Time.get_datetime_string_from_system(), global_position.x, global_position.y, plantData.numTimesWatered + 1, plantData.cuteName)
 	initialize(plantData)
 	farm.saveAllPlantData()
 

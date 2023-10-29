@@ -1,0 +1,122 @@
+[
+ {
+   "crop": "tomatoes",
+   "water_every_n_days": 2,
+   "sun_coverage": "full sun",
+   "days_to_maturity": 80
+ },
+ {
+   "crop": "radish",
+   "water_every_n_days": 3,
+   "sun_coverage": "full sun",
+   "days_to_maturity": 40
+ },
+ {
+   "crop": "cucumber",
+   "water_every_n_days": 5,
+   "sun_coverage": "full sun",
+   "days_to_maturity": 60
+ },
+ {
+   "crop": "carrots",
+   "water_every_n_days": 2,
+   "sun_coverage": "full sun",
+   "days_to_maturity": 70
+ },
+ {
+   "crop": "lettuce",
+   "water_every_n_days": 5,
+   "sun_coverage": "full sun",
+   "days_to_maturity": 50
+ },
+ {
+   "crop": "spinach",
+   "water_every_n_days": 2,
+   "sun_coverage": "light shade",
+   "days_to_maturity": 40
+ },
+ {
+   "crop": "cabbage",
+   "water_every_n_days": 7,
+   "sun_coverage": "full sun",
+   "days_to_maturity": 135
+ },
+ {
+   "crop": "beets",
+   "water_every_n_days": 7,
+   "sun_coverage": "full sun",
+   "days_to_maturity": 60
+ },
+ {
+   "crop": "peas",
+   "water_every_n_days": 7,
+   "sun_coverage": "full sun",
+   "days_to_maturity": 60
+ },
+ {
+   "crop": "green beans",
+   "water_every_n_days": 3,
+   "sun_coverage": "full sun",
+   "days_to_maturity": 55
+ },
+ {
+   "crop": "potatoes",
+   "water_every_n_days": 5,
+   "sun_coverage": "full sun",
+   "days_to_maturity": 80
+ },
+ {
+   "crop": "onions",
+   "water_every_n_days": 5,
+   "sun_coverage": "full sun",
+   "days_to_maturity": 100
+ },
+ {
+   "crop": "turnips",
+   "water_every_n_days": 4,
+   "sun_coverage": "full sun",
+   "days_to_maturity": 50
+ },
+ {
+   "crop": "brussel sprouts",
+   "water_every_n_days": 7,
+   "sun_coverage": "full sun",
+   "days_to_maturity": 110
+ },
+ {
+   "crop": "peppers",
+   "water_every_n_days": 7,
+   "sun_coverage": "full sun",
+   "days_to_maturity": 80
+ },
+ {
+   "crop": "pumpkin",
+   "water_every_n_days": 3,
+   "sun_coverage": "full sun",
+   "days_to_maturity": 120
+ },
+ {
+   "crop": "okra",
+   "water_every_n_days": 7,
+   "sun_coverage": "full sun",
+   "days_to_maturity": 60
+ },
+ {
+   "crop": "broccoli",
+   "water_every_n_days": 4,
+   "sun_coverage": "full sun",
+   "days_to_maturity": 70
+ },
+ {
+   "crop": "asparagus",
+   "water_every_n_days": 4,
+   "sun_coverage": "full sun",
+   "days_to_maturity": 1000
+ },
+ {
+   "crop": "swiss chard",
+   "water_every_n_days": 4,
+   "sun_coverage": "full sun",
+   "days_to_maturity": 60
+ }
+]

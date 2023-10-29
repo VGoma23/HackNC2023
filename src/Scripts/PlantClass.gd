@@ -9,13 +9,27 @@ var cuteName: String
 var positionX: int
 var positionY: int
 
+var sunCoverage: String
+var daysToMaturity: int
 
 @export var DEV_DAY_OFFSET = 0
 
-func _init(plant_name="test", last_watered="11", watering_interval=1,  position_x=0, position_y=0, num_times_watered = 0, cute_name = null,):
-	lastWateredDate = last_watered
-	wateringInterval = watering_interval
+func _init(plant_name="tomatoes", last_watered=Time.get_datetime_string_from_system(), position_x=0, position_y=0, num_times_watered = 0, cute_name = null,):
+	var dict = {}
+	var json_as_text = FileAccess.get_file_as_string("res://Data/HackNC_2023_crop_data.json")
+	var json_as_dict = JSON.parse_string(json_as_text)
+	
 	plantName = plant_name
+	lastWateredDate = last_watered
+	for object in json_as_dict:
+		if object["crop"] == plantName:
+			wateringInterval = object["water_every_n_days"]
+			print(wateringInterval)
+			sunCoverage = object["sun_coverage"]
+			daysToMaturity = object["days_to_maturity"]
+			break
+		
+	
 	numTimesWatered = numTimesWatered
 	positionX = position_x
 	positionY = position_y
