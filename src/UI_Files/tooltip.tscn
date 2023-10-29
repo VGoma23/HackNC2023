@@ -1,0 +1,124 @@
+[gd_scene load_steps=4 format=3 uid="uid://cuktjti1w8fwo"]
+
+[ext_resource type="FontFile" uid="uid://bg7024uqgiwv0" path="res://Fonts/Retro Gaming.ttf" id="1_5k4pm"]
+[ext_resource type="Script" path="res://UI_Files/back_to_homepage.gd" id="2_81iqs"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_a5531"]
+
+[node name="Control" type="Popup"]
+position = Vector2i(38, 37)
+size = Vector2i(500, 950)
+visible = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.294118, 0.560784, 0.301961, 1)
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_a5531")
+draw_center = false
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="NinePatchRect/MarginContainer"]
+layout_mode = 2
+
+[node name="plant_name" type="Label" parent="NinePatchRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.854902, 0.752941, 0.243137, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_5k4pm")
+theme_override_font_sizes/font_size = 40
+text = "<PLANT NAME>"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="stat_wrapper" type="HBoxContainer" parent="NinePatchRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="stat" type="Label" parent="NinePatchRect/MarginContainer/VBoxContainer/stat_wrapper"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_5k4pm")
+theme_override_font_sizes/font_size = 30
+
+[node name="stat_wrapper2" type="HBoxContainer" parent="NinePatchRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="stat" type="Label" parent="NinePatchRect/MarginContainer/VBoxContainer/stat_wrapper2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_5k4pm")
+theme_override_font_sizes/font_size = 30
+text = "<statistic_1>"
+
+[node name="stat_wrapper3" type="HBoxContainer" parent="NinePatchRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="stat" type="Label" parent="NinePatchRect/MarginContainer/VBoxContainer/stat_wrapper3"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_5k4pm")
+theme_override_font_sizes/font_size = 30
+text = "<statistic_2>"
+
+[node name="stat_wrapper4" type="HBoxContainer" parent="NinePatchRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="stat" type="Label" parent="NinePatchRect/MarginContainer/VBoxContainer/stat_wrapper4"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_5k4pm")
+theme_override_font_sizes/font_size = 30
+text = "<statistic_3>"
+
+[node name="stat_wrapper5" type="HBoxContainer" parent="NinePatchRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="stat" type="Label" parent="NinePatchRect/MarginContainer/VBoxContainer/stat_wrapper5"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_5k4pm")
+theme_override_font_sizes/font_size = 30
+text = "<statistic_4>"
+
+[node name="stat_wrapper6" type="HBoxContainer" parent="NinePatchRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="stat" type="Label" parent="NinePatchRect/MarginContainer/VBoxContainer/stat_wrapper6"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_5k4pm")
+theme_override_font_sizes/font_size = 30
+text = "<statistic_5>"
+
+[node name="home" type="Button" parent="NinePatchRect"]
+layout_mode = 2
+offset_left = 25.0
+offset_top = 425.0
+offset_right = 475.0
+offset_bottom = 1350.0
+theme_override_fonts/font = ExtResource("1_5k4pm")
+theme_override_font_sizes/font_size = 45
+text = "HOME"
+flat = true
+script = ExtResource("2_81iqs")
+
+[connection signal="button_down" from="NinePatchRect/home" to="NinePatchRect/home" method="_on_button_down"]
