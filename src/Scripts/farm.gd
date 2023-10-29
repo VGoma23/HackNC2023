@@ -2,14 +2,15 @@ extends Node2D
 
 
 var Plant = preload("res://Scripts/PlantClass.gd")
+var previousPosition: Vector2
 
 
-
+@onready var addPlantMenu = $CanvasLayer/add_plants
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
-	#load_game()
+	load_game()
+	waterStreak()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -17,6 +18,7 @@ func _process(delta):
 	pass
 
 func inspectPlantUI(plant):
+	$CanvasLayer/Node2D.show_menu(plant)
 	print("pull up plant UI")
 
 
@@ -28,6 +30,10 @@ func saveAllPlantData():
 		var json_string = JSON.stringify(node.get_plant_data_json())
 		save_game.store_line(json_string)
 		
+	
+	var save_stats = FileAccess.open("user://savestats.save", FileAccess.WRITE)
+	var statController = $StatTracker
+	save_stats.store_line(JSON.stringify(statController.toJSON()))
 	
 func load_game():
 	if not FileAccess.file_exists("user://savegame.save"):
@@ -66,17 +72,54 @@ func load_game():
 				continue
 			plantData.set(i, node_data[i])
 		new_object.initialize(plantData)
+<<<<<<< HEAD
 		var asp = $AudioStreamPlayer
 		asp.play()
+=======
+		var save_stats = FileAccess.open("user://savegame.save", FileAccess.READ)
+		
+	
+	
+	
+	
+	if not FileAccess.file_exists("user://savestats.save"):
+		print("savestats not found")
+		return # Error! We don't have a save to load.
+	var stattrack = $StatTracker
+	stattrack.set_name("DeadStatTracker")
+	stattrack.queue_free()
+	
+	
+	var save_stats = FileAccess.open("user://savestats.save", FileAccess.READ)
+	###### ALL STUFF FROM WHILE LOOP
+	var json_string = save_stats.get_line()
+	# Creates the helper class to interact with JSON
+	var json = JSON.new()
+	# Check if there is any error while parsing the JSON string, skip in case of failure
+	var parse_result = json.parse(json_string)
+	if not parse_result == OK:
+		print("JSON Parse Error: ", json.get_error_message(), " in ", json_string, " at line ", json.get_error_line())
+		return
+	# Get the data from the JSON object
+	var node_data = json.get_data()
+	
+	# Firstly, we need to create the object and add it to the tree and set its position.
+	var new_object = load("res://stat_tracker.tscn").instantiate()
+	add_child(new_object)
+	new_object.set_name("StatTracker")
+	for i in node_data.keys():
+		if i == "filename" or i == "parent":
+			continue
+		new_object.set(i, node_data[i])
+	######## ALL STUFF FROM WHILE LOOP
+>>>>>>> a079bec6b2616334eca729b626721ee1fddf960a
 
 func _on_player_create_plant(_position):
-	var plantData = Plant.new("tomatoes", "2022-10-1111:11:11", _position.x, _position.y)
-	var new_plant = load("res://Elements/plant.tscn").instantiate()
+	
 
-	$YSortNode/Plants.add_child(new_plant)
-	new_plant.initialize(plantData)
-	saveAllPlantData()
-	print("plant made")
+	addPlantMenu.show_menu()
+	previousPosition = _position
+
 
 
 # input stuff raaahhhh
@@ -106,3 +149,24 @@ func _unhandled_input(event):
 		joystickInputVec = joystickInputVec.limit_length(maxLength) / maxLength
 		print(joystickInputVec)
 		player.input_vector = joystickInputVec
+
+
+func _on_add_plants_send_veggie(veggie_name, cuteName):
+	var plantData = Plant.new(veggie_name, Time.get_datetime_string_from_system(), previousPosition.x, previousPosition.y, 0, cuteName)
+	var new_plant = load("res://Elements/plant.tscn").instantiate()
+	$YSortNode/Plants.add_child(new_plant)
+	new_plant.initialize(plantData)
+	saveAllPlantData()
+	$StatTracker.plantsPlanted += 1
+	print("plant made")
+
+func waterStreak():
+	$StatTracker.daysPlayed += 1
+	var plants = $YSortNode/Plants.get_children()
+	for i in plants:
+		if i.plantData.getDaysSinceLastWater() > 1:
+			$StatTracker.waterStreak = 0
+			print("reset streak")
+			return
+	$StatTracker.waterStreak += 1
+	print("add streak")

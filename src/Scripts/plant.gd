@@ -56,6 +56,8 @@ func water():
 	var asp = $AudioStreamPlayer
 	asp.play()
 	
+	$"../../../StatTracker".plantsWatered += 1
+	
 
 func getPlantData():
 	return plantData

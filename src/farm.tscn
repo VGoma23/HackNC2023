@@ -1,14 +1,22 @@
+<<<<<<< HEAD
 [gd_scene load_steps=10 format=3 uid="uid://58ifcrrvp672"]
+=======
+[gd_scene load_steps=14 format=3 uid="uid://58ifcrrvp672"]
+>>>>>>> a079bec6b2616334eca729b626721ee1fddf960a
 
 [ext_resource type="PackedScene" uid="uid://c0krku52pgcqe" path="res://Tilesets/tile_map.tscn" id="1_25fxa"]
 [ext_resource type="PackedScene" uid="uid://bv3iptxxxmaw8" path="res://player.tscn" id="1_pv1ar"]
 [ext_resource type="Script" path="res://Scripts/farm.gd" id="1_sn0f3"]
+[ext_resource type="PackedScene" uid="uid://bcreehyd58h1f" path="res://plant_data.tscn" id="4_ocsdi"]
 [ext_resource type="AudioStream" uid="uid://dr0hr3nm83m21" path="res://Sound/sakura-hz-watching-anime.mp3" id="4_p0io2"]
 [ext_resource type="Texture2D" uid="uid://06oxrdw6b3vb" path="res://Objects/exit_button.png" id="5_jjmjn"]
 [ext_resource type="Texture2D" uid="uid://c0hfwrxu3rgkm" path="res://Objects/Egg item.png" id="5_od1x2"]
 [ext_resource type="Script" path="res://UI_Files/exit_to_homepage.gd" id="6_14odi"]
 [ext_resource type="Script" path="res://Scripts/NameLabel.gd" id="6_bw6y3"]
 [ext_resource type="PackedScene" uid="uid://pad3fg68on2d" path="res://tip_of_the_day.tscn" id="6_e3pu7"]
+[ext_resource type="PackedScene" uid="uid://dr2fmwl455gpn" path="res://action_button.tscn" id="9_bp1af"]
+[ext_resource type="PackedScene" path="res://UI_Files/add_plants.tscn" id="9_p3d5g"]
+[ext_resource type="PackedScene" uid="uid://c56xgg0k0r82d" path="res://stat_tracker.tscn" id="13_8eb2k"]
 
 [node name="Farm" type="Node2D"]
 scale = Vector2(4, 4)
@@ -40,7 +48,6 @@ offset_top = 38.0
 offset_right = 276.0
 offset_bottom = 96.0
 theme_override_font_sizes/font_size = 40
-text = "asdfasdfasdf"
 script = ExtResource("6_bw6y3")
 
 [node name="Button" type="Button" parent="CanvasLayer"]
@@ -55,6 +62,19 @@ script = ExtResource("6_14odi")
 
 [node name="TipOfTheDay" parent="CanvasLayer" instance=ExtResource("6_e3pu7")]
 position = Vector2(-30, 69)
+<<<<<<< HEAD
+=======
+
+[node name="Node2D" parent="CanvasLayer" instance=ExtResource("4_ocsdi")]
+visible = false
+
+[node name="add_plants" parent="CanvasLayer" instance=ExtResource("9_p3d5g")]
+visible = false
+
+[node name="ActionButton" parent="CanvasLayer" instance=ExtResource("9_bp1af")]
+position = Vector2(398, 841)
+scale = Vector2(4.83333, 4.625)
+>>>>>>> a079bec6b2616334eca729b626721ee1fddf960a
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_p0io2")
@@ -65,5 +85,8 @@ autoplay = true
 position = Vector2(72, 131.25)
 texture = ExtResource("5_od1x2")
 
+[node name="StatTracker" parent="." instance=ExtResource("13_8eb2k")]
+
 [connection signal="createPlant" from="YSortNode/Player" to="." method="_on_player_create_plant"]
 [connection signal="button_down" from="CanvasLayer/Button" to="CanvasLayer/Button" method="_on_button_down"]
+[connection signal="send_veggie" from="CanvasLayer/add_plants" to="." method="_on_add_plants_send_veggie"]

@@ -2,7 +2,22 @@
 
 [ext_resource type="Script" path="res://Scripts/tip_of_the_day.gd" id="1_552jh"]
 [ext_resource type="Texture2D" uid="uid://b0cgl0u8f8alu" path="res://Objects/wooden-frame-pixel-art-style_475147-2350.png" id="1_c45u0"]
-[ext_resource type="FontFile" path="res://Fonts/Retro Gaming.ttf" id="3_mopnw"]
+[ext_resource type="FontFile" uid="uid://be4btiktqbfji" path="res://Fonts/Retro Gaming.ttf" id="3_mopnw"]
+
+[sub_resource type="Animation" id="Animation_bmkyw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_e3jq8"]
 resource_name = "fade_out"
@@ -18,21 +33,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_bmkyw"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ks0su"]
