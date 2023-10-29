@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://ltvd3eydvfv7"]
+
+[ext_resource type="Texture2D" uid="uid://b3rsg0562yywu" path="res://Objects/Interact.png" id="1_y3th0"]
+[ext_resource type="Texture2D" uid="uid://ck4koexaup43v" path="res://Objects/Interact-Pressed.png" id="2_vp88o"]
+
+[node name="ActionButton" type="TouchScreenButton"]
+modulate = Color(1, 1, 1, 0.54902)
+texture_normal = ExtResource("1_y3th0")
+texture_pressed = ExtResource("2_vp88o")
+action = "ui_accept"
