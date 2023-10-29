@@ -12,7 +12,7 @@ var positionY: int
 
 @export var DEV_DAY_OFFSET = 0
 
-func _init(plant_name, last_watered, watering_interval,  position_x, position_y, num_times_watered = 0, cute_name = null,):
+func _init(plant_name="test", last_watered="11", watering_interval=1,  position_x=0, position_y=0, num_times_watered = 0, cute_name = null,):
 	lastWateredDate = last_watered
 	wateringInterval = watering_interval
 	plantName = plant_name

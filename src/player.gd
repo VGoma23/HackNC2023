@@ -12,6 +12,10 @@ var animationTree = null
 var animationState = null
 
 @onready var sprite = $Sprite2D
+@onready var collisionArea = $"Interact Node/Area2D"
+
+signal createPlant(_position)
+
 
 
 func _ready():
@@ -36,4 +40,13 @@ func _physics_process(delta):
 	else:
 		velocity =  velocity.move_toward(Vector2.ZERO, FRICTION)
 		animationState.travel("Idle")
+		
+	if Input.is_action_just_pressed("ui_accept"):
+		# it does not have a plant but it is colliding with the the tilemap
+		if collisionArea.has_overlapping_bodies() and !collisionArea.has_overlapping_areas():
+			createPlant.emit($"Interact Node/Area2D/Interactible Collision".global_position)
+			print("Create a plant!")
+			
+			
+			
 	move_and_slide()

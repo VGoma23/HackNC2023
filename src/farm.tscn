@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bqusto2s8rqnc"]
+[gd_scene load_steps=7 format=3 uid="uid://bqusto2s8rqnc"]
 
 [ext_resource type="PackedScene" uid="uid://hfg7hgjfnyf2" path="res://Tilesets/tile_map.tscn" id="1_25fxa"]
 [ext_resource type="PackedScene" uid="uid://ceo8g0sxdlxjl" path="res://player.tscn" id="1_pv1ar"]
 [ext_resource type="Script" path="res://Scripts/farm.gd" id="1_sn0f3"]
+[ext_resource type="PackedScene" uid="uid://dswo3rdxngvnl" path="res://Elements/plant.tscn" id="2_vcp80"]
 [ext_resource type="AudioStream" uid="uid://dr0hr3nm83m21" path="res://Sound/sakura-hz-watching-anime.mp3" id="4_p0io2"]
 [ext_resource type="Texture2D" uid="uid://c0hfwrxu3rgkm" path="res://Objects/Egg item.png" id="5_od1x2"]
 
@@ -28,6 +29,9 @@ position = Vector2(68, 69)
 
 [node name="Plants" type="Node2D" parent="YSortNode"]
 
+[node name="Plant" parent="YSortNode/Plants" instance=ExtResource("2_vcp80")]
+position = Vector2(40, 40)
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
@@ -36,3 +40,5 @@ stream = ExtResource("4_p0io2")
 [node name="EggItem" type="Sprite2D" parent="."]
 position = Vector2(72, 131.25)
 texture = ExtResource("5_od1x2")
+
+[connection signal="createPlant" from="YSortNode/Player" to="." method="_on_player_create_plant"]

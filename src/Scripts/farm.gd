@@ -1,8 +1,12 @@
 extends Node2D
 
 
+var Plant = preload("res://Scripts/PlantClass.gd")
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	# TODO THIS IS A TEST
+	saveAllPlantData()
 	load_game()
 
 
@@ -50,11 +54,21 @@ func load_game():
 		var new_object = load("res://Elements/plant.tscn").instantiate()
 		$YSortNode/Plants.add_child(new_object)
 		
-		print(node_data)
+		var plantData = Plant.new()
+		
 		new_object.global_position = Vector2(node_data["positionX"], node_data["positionY"])
-
+		
 		# Now we set the remaining variables.
 		for i in node_data.keys():
-			if i == "filename" or i == "parent" or i == "position_x" or i == "position_y":
+			if i == "filename" or i == "parent":
 				continue
-			new_object.set(i, node_data[i])
+			plantData.set(i, node_data[i])
+		new_object.initialize(plantData)
+
+func _on_player_create_plant(_position):
+	var plantData = Plant.new("test", "2022-10-1111:11:11", 3, _position.x, _position.y)
+	var new_plant = load("res://Elements/plant.tscn").instantiate()
+
+	$YSortNode/Plants.add_child(new_plant)
+	new_plant.initialize(plantData)
+	print("plant made")
