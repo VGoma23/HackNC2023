@@ -25,11 +25,14 @@ func _ready():
 
 func initialize(plant):
 	plantData = plant
+	
 	# do more stuff based on this
 	if plantData.isThirsty():
 		sprite.modulate = "c56204"
 	else:
 		sprite.modulate = "AAAAAA"
+	global_position.x = plant.positionX
+	global_position.y = plant.positionY
 	
 func _physics_process(delta):
 	if not isPlayerInArea:

@@ -8,26 +8,29 @@ radius = 4.0
 height = 16.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_b1o3f"]
-radius = 11.0454
+radius = 6.08276
 
 [node name="Plant" type="StaticBody2D"]
+position = Vector2(0, -4)
 script = ExtResource("1_hlue8")
 
 [node name="CollisionBox" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 4)
+position = Vector2(0, 1)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_bm62k")
 debug_color = Color(0.94902, 0, 0.572549, 0.419608)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -3)
 texture = ExtResource("1_7l2cd")
 hframes = 6
 vframes = 2
 frame = 1
 
 [node name="InteractionArea" type="Area2D" parent="."]
-collision_layer = 3
-collision_mask = 3
+position = Vector2(0, -3)
+collision_layer = 7
+collision_mask = 7
 
 [node name="InteractionShape" type="CollisionShape2D" parent="InteractionArea"]
 position = Vector2(0, 3)
