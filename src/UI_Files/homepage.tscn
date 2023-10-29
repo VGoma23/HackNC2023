@@ -56,6 +56,7 @@ script = ExtResource("3_ypuxd")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_u6q6c")
+autoplay = true
 
 [connection signal="button_down" from="UI/menu_buttons/start" to="UI/menu_buttons/start" method="_on_button_down"]
 [connection signal="button_down" from="UI/menu_buttons/plant_data" to="UI/menu_buttons/plant_data" method="_on_button_down"]
