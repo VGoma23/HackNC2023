@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/tip_of_the_day.gd" id="1_552jh"]
 [ext_resource type="Texture2D" uid="uid://b0cgl0u8f8alu" path="res://Objects/wooden-frame-pixel-art-style_475147-2350.png" id="1_c45u0"]
-[ext_resource type="FontFile" uid="uid://du3w1itqrhv4t" path="res://Fonts/Retro Gaming.ttf" id="3_mopnw"]
+[ext_resource type="FontFile" path="res://Fonts/Retro Gaming.ttf" id="3_mopnw"]
 
 [sub_resource type="Animation" id="Animation_e3jq8"]
 resource_name = "fade_out"
@@ -87,4 +87,5 @@ theme_override_fonts/normal_font = ExtResource("3_mopnw")
 theme_override_font_sizes/normal_font_size = 35
 text = "You may have"
 
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

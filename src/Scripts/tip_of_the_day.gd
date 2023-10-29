@@ -13,6 +13,7 @@ var tips = ["Did you know that apples, cherries, and peaches are part of the ros
 ]
 
 func _ready():
+	visible = true
 	var rng = RandomNumberGenerator.new()
 	rng.randomize()
 	label.text = tips[rng.randi_range(0, len(tips)-1)]
@@ -20,3 +21,7 @@ func _ready():
 
 func _on_timer_timeout():
 	animationPlayer.play("fade_out")
+
+
+func _on_animation_player_animation_finished(anim_name):
+	visible = false

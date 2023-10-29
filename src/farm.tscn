@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bv3iptxxxmaw8" path="res://player.tscn" id="1_pv1ar"]
 [ext_resource type="Script" path="res://Scripts/farm.gd" id="1_sn0f3"]
 [ext_resource type="AudioStream" uid="uid://dr0hr3nm83m21" path="res://Sound/sakura-hz-watching-anime.mp3" id="4_p0io2"]
-[ext_resource type="FontFile" uid="uid://du3w1itqrhv4t" path="res://Fonts/Retro Gaming.ttf" id="5_lqamn"]
+[ext_resource type="FontFile" path="res://Fonts/Retro Gaming.ttf" id="5_lqamn"]
 [ext_resource type="Texture2D" uid="uid://c0hfwrxu3rgkm" path="res://Objects/Egg item.png" id="5_od1x2"]
 [ext_resource type="Script" path="res://Scripts/NameLabel.gd" id="6_bw6y3"]
 [ext_resource type="PackedScene" uid="uid://pad3fg68on2d" path="res://tip_of_the_day.tscn" id="6_e3pu7"]
