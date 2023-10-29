@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cuktjti1w8fwo"]
 
-[ext_resource type="FontFile" uid="uid://bg7024uqgiwv0" path="res://Fonts/Retro Gaming.ttf" id="1_5k4pm"]
+[ext_resource type="FontFile" uid="uid://b5x7qq72w6l08" path="res://Fonts/upheavtt.ttf" id="1_cwgu4"]
 [ext_resource type="Script" path="res://UI_Files/back_to_homepage.gd" id="2_81iqs"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_a5531"]
@@ -50,8 +50,8 @@ layout_mode = 2
 layout_mode = 2
 theme_override_colors/font_color = Color(0.854902, 0.752941, 0.243137, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_5k4pm")
-theme_override_font_sizes/font_size = 40
+theme_override_fonts/font = ExtResource("1_cwgu4")
+theme_override_font_sizes/font_size = 60
 text = "<PLANT NAME>"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -61,7 +61,7 @@ layout_mode = 2
 
 [node name="stat" type="Label" parent="NinePatchRect/MarginContainer/VBoxContainer/stat_wrapper"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_5k4pm")
+theme_override_fonts/font = ExtResource("1_cwgu4")
 theme_override_font_sizes/font_size = 30
 
 [node name="stat_wrapper2" type="HBoxContainer" parent="NinePatchRect/MarginContainer/VBoxContainer"]
@@ -69,7 +69,7 @@ layout_mode = 2
 
 [node name="stat" type="Label" parent="NinePatchRect/MarginContainer/VBoxContainer/stat_wrapper2"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_5k4pm")
+theme_override_fonts/font = ExtResource("1_cwgu4")
 theme_override_font_sizes/font_size = 30
 text = "<statistic_1>"
 
@@ -78,7 +78,7 @@ layout_mode = 2
 
 [node name="stat" type="Label" parent="NinePatchRect/MarginContainer/VBoxContainer/stat_wrapper3"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_5k4pm")
+theme_override_fonts/font = ExtResource("1_cwgu4")
 theme_override_font_sizes/font_size = 30
 text = "<statistic_2>"
 
@@ -87,7 +87,7 @@ layout_mode = 2
 
 [node name="stat" type="Label" parent="NinePatchRect/MarginContainer/VBoxContainer/stat_wrapper4"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_5k4pm")
+theme_override_fonts/font = ExtResource("1_cwgu4")
 theme_override_font_sizes/font_size = 30
 text = "<statistic_3>"
 
@@ -96,7 +96,7 @@ layout_mode = 2
 
 [node name="stat" type="Label" parent="NinePatchRect/MarginContainer/VBoxContainer/stat_wrapper5"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_5k4pm")
+theme_override_fonts/font = ExtResource("1_cwgu4")
 theme_override_font_sizes/font_size = 30
 text = "<statistic_4>"
 
@@ -105,7 +105,7 @@ layout_mode = 2
 
 [node name="stat" type="Label" parent="NinePatchRect/MarginContainer/VBoxContainer/stat_wrapper6"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_5k4pm")
+theme_override_fonts/font = ExtResource("1_cwgu4")
 theme_override_font_sizes/font_size = 30
 text = "<statistic_5>"
 
@@ -115,8 +115,8 @@ offset_left = 25.0
 offset_top = 425.0
 offset_right = 475.0
 offset_bottom = 1350.0
-theme_override_fonts/font = ExtResource("1_5k4pm")
-theme_override_font_sizes/font_size = 45
+theme_override_fonts/font = ExtResource("1_cwgu4")
+theme_override_font_sizes/font_size = 60
 text = "HOME"
 flat = true
 script = ExtResource("2_81iqs")
