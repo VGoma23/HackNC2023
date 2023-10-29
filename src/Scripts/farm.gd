@@ -160,7 +160,7 @@ func waterStreak():
 	var plants = $YSortNode/Plants.get_children()
 	for i in plants:
 		if i.plantData.isStreakBroken():
-			$StatTracker.waterStreak = 0
+			$StatTracker.waterStreak = 1
 			print("reset streak")
 			return
 	$StatTracker.waterStreak += 1
