@@ -3,11 +3,21 @@ extends Node2D
 
 var Plant = preload("res://Scripts/PlantClass.gd")
 
+
+var tips = ["Did you know that apples, cherries, and peaches are part of the rose (Rosaceae) family?",
+"Did you know that okra, cotton, cacao, and hibiscus are all part of the Malvaceae family?",
+"A sunflower is actually a massive bloom of 1,000–2,000 individual flowers in its fuzzy brown center. Each of these flowers eventually produces a sunflower seed.",
+"Strawberries are the only fruit that holds seeds on their exterior.",
+"Peanuts aren’t actually nuts—they’re legumes that are closer to beans and lentils.",
+"You might know that tomatoes are fruits, but did you know that avocados and pumpkins are also fruits?",
+"Vanilla beans are actually pods from an Orchid.",
+"Herbs, such as Basil, Rosemary, and Mint, function as natural insect repellent.",
+]
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	# TODO THIS IS A TEST
-	saveAllPlantData()
-	load_game()
+	pass
+	#load_game()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -66,9 +76,39 @@ func load_game():
 		new_object.initialize(plantData)
 
 func _on_player_create_plant(_position):
-	var plantData = Plant.new("test", "2022-10-1111:11:11", 3, _position.x, _position.y)
+	var plantData = Plant.new("tomatoes", "2022-10-1111:11:11", _position.x, _position.y)
 	var new_plant = load("res://Elements/plant.tscn").instantiate()
 
 	$YSortNode/Plants.add_child(new_plant)
 	new_plant.initialize(plantData)
+	saveAllPlantData()
 	print("plant made")
+
+
+# input stuff raaahhhh
+
+var isPressed = false
+var initialPos = null
+var joystickInputVec = Vector2.ZERO
+const maxLength = 100 # extremely subject to change
+
+@onready var player = $YSortNode/Player
+
+func _unhandled_input(event):
+	if (event is InputEventScreenTouch):
+		if (!isPressed && event.pressed):
+			isPressed = true
+			player.touchMovement = true
+			initialPos = event.position
+		elif (isPressed && !event.pressed):
+			isPressed = false
+			player.touchMovement = false
+			initialPos = null
+			joystickInputVec = Vector2.ZERO
+			player.input_vector = Vector2.ZERO
+		print(isPressed)
+	elif (event is InputEventScreenDrag):
+		joystickInputVec = event.position - initialPos
+		joystickInputVec = joystickInputVec.limit_length(maxLength) / maxLength
+		print(joystickInputVec)
+		player.input_vector = joystickInputVec
