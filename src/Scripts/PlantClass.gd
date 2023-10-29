@@ -70,9 +70,13 @@ func getDaysSinceLastWater():
 	var todayDict = Time.get_datetime_dict_from_system()
 	todayDict["day"] += DEV_DAY_OFFSET
 	return days_between(lastWateredDict, todayDict)
-	
-	
-	
+
+func isStreakBroken():
+	var lastWateredDict = Time.get_datetime_dict_from_datetime_string(lastWateredDate, false)
+	var todayDict = Time.get_datetime_dict_from_system()
+	todayDict["day"] += DEV_DAY_OFFSET
+	return days_between(lastWateredDict, todayDict) - wateringInterval > 0
+
 var days_in_month = {
 	1: 31,  # January
 	2: 28,  # February

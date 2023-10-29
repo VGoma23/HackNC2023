@@ -67,3 +67,4 @@ text = "TBD"
 flat = true
 
 [connection signal="pressed" from="UI/Menu Buttons/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="UI/Menu Buttons/Stats" to="." method="_on_stats_pressed"]

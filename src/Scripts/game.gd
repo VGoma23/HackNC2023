@@ -13,3 +13,7 @@ func _process(delta):
 
 func _on_start_pressed():
 	get_tree().change_scene_to_file("res://farm.tscn")
+
+
+func _on_stats_pressed():
+	get_tree().change_scene_to_file("res://Screens/stats_screen.tscn")

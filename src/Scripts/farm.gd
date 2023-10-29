@@ -72,10 +72,6 @@ func load_game():
 				continue
 			plantData.set(i, node_data[i])
 		new_object.initialize(plantData)
-<<<<<<< HEAD
-		var asp = $AudioStreamPlayer
-		asp.play()
-=======
 		var save_stats = FileAccess.open("user://savegame.save", FileAccess.READ)
 		
 	
@@ -112,7 +108,6 @@ func load_game():
 			continue
 		new_object.set(i, node_data[i])
 	######## ALL STUFF FROM WHILE LOOP
->>>>>>> a079bec6b2616334eca729b626721ee1fddf960a
 
 func _on_player_create_plant(_position):
 	
@@ -164,7 +159,7 @@ func waterStreak():
 	$StatTracker.daysPlayed += 1
 	var plants = $YSortNode/Plants.get_children()
 	for i in plants:
-		if i.plantData.getDaysSinceLastWater() > 1:
+		if i.plantData.isStreakBroken():
 			$StatTracker.waterStreak = 0
 			print("reset streak")
 			return

@@ -7,7 +7,6 @@ func _ready():
 		return # Error! We don't have a save to load.
 	
 	var save_stats = FileAccess.open("user://savestats.save", FileAccess.READ)
-	###### ALL STUFF FROM WHILE LOOP
 	var json_string = save_stats.get_line()
 	# Creates the helper class to interact with JSON
 	var json = JSON.new()
@@ -18,13 +17,17 @@ func _ready():
 		return
 	# Get the data from the JSON object
 	var node_data = json.get_data()
-	
 	# Firstly, we need to create the object and add it to the tree and set its position.
-	var new_object = load("res://stat_tracker.tscn").instantiate()
-	add_child(new_object)
-	new_object.set_name("StatTracker")
+	var statTracker = load("res://stat_tracker.tscn").instantiate()
+	add_child(statTracker)
+	statTracker.set_name("StatTracker")
 	for i in node_data.keys():
 		if i == "filename" or i == "parent":
 			continue
-		new_object.set(i, node_data[i])
-	######## ALL STUFF FROM WHILE LOOP
+		statTracker.set(i, node_data[i])
+	
+	var container = $Stats/Container
+	container.get_child(0).get_child(1).text = str(statTracker.plantsPlanted)
+	container.get_child(1).get_child(1).text = str(statTracker.plantsWatered)
+	container.get_child(2).get_child(1).text = str(statTracker.daysPlayed)
+	container.get_child(3).get_child(1).text = str(statTracker.waterStreak)
