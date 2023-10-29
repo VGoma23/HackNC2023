@@ -32,7 +32,7 @@ func _init(plant_name="tomatoes", last_watered=Time.get_datetime_string_from_sys
 			break
 		
 	
-	numTimesWatered = numTimesWatered
+	numTimesWatered = num_times_watered
 	positionX = position_x
 	positionY = position_y
 	if cute_name == null:

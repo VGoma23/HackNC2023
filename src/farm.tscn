@@ -1,14 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://58ifcrrvp672"]
+[gd_scene load_steps=12 format=3 uid="uid://58ifcrrvp672"]
 
 [ext_resource type="PackedScene" uid="uid://c0krku52pgcqe" path="res://Tilesets/tile_map.tscn" id="1_25fxa"]
 [ext_resource type="PackedScene" uid="uid://bv3iptxxxmaw8" path="res://player.tscn" id="1_pv1ar"]
 [ext_resource type="Script" path="res://Scripts/farm.gd" id="1_sn0f3"]
 [ext_resource type="PackedScene" uid="uid://pygcn648155h" path="res://plant_data.tscn" id="4_ocsdi"]
 [ext_resource type="AudioStream" uid="uid://dr0hr3nm83m21" path="res://Sound/sakura-hz-watching-anime.mp3" id="4_p0io2"]
-
-
 [ext_resource type="Texture2D" uid="uid://06oxrdw6b3vb" path="res://Objects/exit_button.png" id="5_jjmjn"]
-[ext_resource type="FontFile" path="res://Fonts/Retro Gaming.ttf" id="5_lqamn"]
+[ext_resource type="FontFile" uid="uid://be4btiktqbfji" path="res://Fonts/Retro Gaming.ttf" id="5_lqamn"]
 [ext_resource type="Texture2D" uid="uid://c0hfwrxu3rgkm" path="res://Objects/Egg item.png" id="5_od1x2"]
 [ext_resource type="Script" path="res://UI_Files/exit_to_homepage.gd" id="6_14odi"]
 [ext_resource type="Script" path="res://Scripts/NameLabel.gd" id="6_bw6y3"]
@@ -35,6 +33,7 @@ layer_1/tile_data = PackedInt32Array(-262150, 131074, 3, -262149, 131074, 3, -26
 position = Vector2(68, 69)
 
 [node name="Plants" type="Node2D" parent="YSortNode"]
+y_sort_enabled = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -43,6 +42,7 @@ offset_left = 30.0
 offset_top = 38.0
 offset_right = 276.0
 offset_bottom = 96.0
+theme_override_fonts/font = ExtResource("5_lqamn")
 theme_override_font_sizes/font_size = 40
 script = ExtResource("6_bw6y3")
 

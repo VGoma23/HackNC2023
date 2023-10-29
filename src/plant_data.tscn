@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://pygcn648155h"]
+[gd_scene load_steps=7 format=3 uid="uid://pygcn648155h"]
 
 [ext_resource type="Script" path="res://Scripts/plant_data.gd" id="1_4qnf3"]
 [ext_resource type="FontFile" uid="uid://b5x7qq72w6l08" path="res://Fonts/upheavtt.ttf" id="1_44cq6"]
 [ext_resource type="Script" path="res://Scripts/backhome.gd" id="2_byt8c"]
-[ext_resource type="Texture2D" uid="uid://civgd2oj4miea" path="res://Crop_Images/asparagus.jpg" id="2_ybfsr"]
+[ext_resource type="Texture2D" uid="uid://ct0emuwcvmcs4" path="res://Crop_Images/asparagus.jpg" id="2_ybfsr"]
+[ext_resource type="FontFile" uid="uid://be4btiktqbfji" path="res://Fonts/Retro Gaming.ttf" id="3_7824a"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cf7qo"]
 texture = ExtResource("2_ybfsr")
@@ -38,7 +39,7 @@ layout_mode = 0
 offset_top = -1.0
 offset_right = 196.0
 offset_bottom = 197.0
-theme_override_fonts/normal_font = ExtResource("1_44cq6")
+theme_override_fonts/normal_font = ExtResource("3_7824a")
 theme_override_font_sizes/normal_font_size = 20
 
 [node name="Menu Buttons" type="Node2D" parent="Background/ColorRect/UI"]
@@ -80,7 +81,7 @@ offset_bottom = 358.0
 
 [node name="Label" type="RichTextLabel" parent="Background/ColorRect/UI/PanelContainer2"]
 layout_mode = 2
-theme_override_fonts/normal_font = ExtResource("1_44cq6")
+theme_override_fonts/normal_font = ExtResource("3_7824a")
 theme_override_font_sizes/normal_font_size = 20
 
 [connection signal="button_down" from="Background/ColorRect/UI/Menu Buttons/HBoxContainer/Homepage" to="." method="_on_homepage_button_down"]
