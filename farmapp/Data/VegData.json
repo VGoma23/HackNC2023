@@ -1,0 +1,15 @@
+{
+	"1": {
+		"Name": "Wheat",
+		"Water": 20,
+		"Health": 10
+	},
+
+	"2": {
+		"Name": "Broccoli",
+		"Water": 20,
+		"Health": 10
+	}
+
+
+}

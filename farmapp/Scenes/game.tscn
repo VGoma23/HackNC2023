@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://cop3bjw33att0"]
+[gd_scene load_steps=4 format=3 uid="uid://cop3bjw33att0"]
 
 [ext_resource type="FontFile" uid="uid://b5x7qq72w6l08" path="res://Fonts/upheavtt.ttf" id="1_jr2st"]
+[ext_resource type="Script" path="res://Scripts/Start_Button.gd" id="2_mj3vx"]
+[ext_resource type="Script" path="res://Scenes/check_plant_data.gd" id="3_y8sjy"]
 
 [node name="Game" type="Node2D"]
 
@@ -37,6 +39,7 @@ theme_override_fonts/font = ExtResource("1_jr2st")
 theme_override_font_sizes/font_size = 40
 text = "Start"
 flat = true
+script = ExtResource("2_mj3vx")
 
 [node name="Stats" type="Button" parent="UI/Menu Buttons"]
 offset_top = 160.0
@@ -49,6 +52,7 @@ theme_override_font_sizes/font_size = 40
 text = "Stats
 "
 flat = true
+script = ExtResource("3_y8sjy")
 
 [node name="Extra button" type="Button" parent="UI/Menu Buttons"]
 offset_top = 220.0
@@ -61,5 +65,9 @@ theme_override_colors/font_focus_color = Color(0.584314, 0.419608, 0.231373, 1)
 theme_override_colors/font_hover_pressed_color = Color(0.584314, 0.419608, 0.231373, 1)
 theme_override_fonts/font = ExtResource("1_jr2st")
 theme_override_font_sizes/font_size = 40
-text = "TBD"
+text = "FARM LIST
+"
 flat = true
+
+[connection signal="pressed" from="UI/Menu Buttons/Start" to="UI/Menu Buttons/Start" method="_on_pressed"]
+[connection signal="button_down" from="UI/Menu Buttons/Stats" to="UI/Menu Buttons/Stats" method="_on_button_down"]
