@@ -53,23 +53,8 @@ text = "Stats
 "
 flat = true
 
-[node name="Extra button" type="Button" parent="UI/Menu Buttons"]
-offset_top = 220.0
-offset_right = 576.0
-offset_bottom = 287.0
-theme_override_colors/font_color = Color(0, 0.596078, 0, 1)
-theme_override_colors/font_pressed_color = Color(0.584314, 0.419608, 0.231373, 1)
-theme_override_colors/font_hover_color = Color(0.392157, 0.47451, 0, 1)
-theme_override_colors/font_focus_color = Color(0.584314, 0.419608, 0.231373, 1)
-theme_override_colors/font_hover_pressed_color = Color(0.584314, 0.419608, 0.231373, 1)
-theme_override_fonts/font = ExtResource("1_jr2st")
-theme_override_font_sizes/font_size = 40
-text = "TBD"
-flat = true
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_li8p0")
-autoplay = true
 
 [connection signal="pressed" from="UI/Menu Buttons/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="UI/Menu Buttons/Stats" to="." method="_on_stats_pressed"]
