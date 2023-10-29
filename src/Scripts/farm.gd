@@ -85,3 +85,30 @@ func _on_player_create_plant(_position):
 	print("plant made")
 
 
+# input stuff raaahhhh
+
+var isPressed = false
+var initialPos = null
+var joystickInputVec = Vector2.ZERO
+const maxLength = 100 # extremely subject to change
+
+@onready var player = $YSortNode/Player
+
+func _unhandled_input(event):
+	if (event is InputEventScreenTouch):
+		if (!isPressed && event.pressed):
+			isPressed = true
+			player.touchMovement = true
+			initialPos = event.position
+		elif (isPressed && !event.pressed):
+			isPressed = false
+			player.touchMovement = false
+			initialPos = null
+			joystickInputVec = Vector2.ZERO
+			player.input_vector = Vector2.ZERO
+		print(isPressed)
+	elif (event is InputEventScreenDrag):
+		joystickInputVec = event.position - initialPos
+		joystickInputVec = joystickInputVec.limit_length(maxLength) / maxLength
+		print(joystickInputVec)
+		player.input_vector = joystickInputVec

@@ -24,6 +24,10 @@ window/size/window_height_override=1024
 window/stretch/mode="viewport"
 window/handheld/orientation=1
 
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
 [layer_names]
 
 2d_physics/layer_1="World Collision"
