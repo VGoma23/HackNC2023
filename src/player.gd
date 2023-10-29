@@ -1,9 +1,11 @@
 extends CharacterBody2D
 
+const SCALE = 4
+
 var temp_velocity = Vector2.ZERO
-const MAX_SPEED = 80
-const ACCELLERATION = 350
-const FRICTION = 60
+const MAX_SPEED = 80 * 4
+const ACCELLERATION = 350 * 4
+const FRICTION = 60 * 4
 
 var animationPlayer = null
 var animationTree = null
