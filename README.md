@@ -5,15 +5,11 @@
 
 
 
-
-
-
-
-
-
-
-
-
+## Team Members: 
+Sarah Crowder
+Michael Jenkins
+Farhan Sanukri
+Vibhu Gomatam
 
 
 
