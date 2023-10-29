@@ -1,11 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://58ifcrrvp672"]
+[gd_scene load_steps=9 format=3 uid="uid://58ifcrrvp672"]
 
 [ext_resource type="PackedScene" uid="uid://c0krku52pgcqe" path="res://Tilesets/tile_map.tscn" id="1_25fxa"]
 [ext_resource type="PackedScene" uid="uid://bv3iptxxxmaw8" path="res://player.tscn" id="1_pv1ar"]
 [ext_resource type="Script" path="res://Scripts/farm.gd" id="1_sn0f3"]
 [ext_resource type="AudioStream" uid="uid://dr0hr3nm83m21" path="res://Sound/sakura-hz-watching-anime.mp3" id="4_p0io2"]
-[ext_resource type="FontFile" uid="uid://du3w1itqrhv4t" path="res://Fonts/Retro Gaming.ttf" id="5_lqamn"]
+[ext_resource type="Texture2D" uid="uid://06oxrdw6b3vb" path="res://Objects/exit_button.png" id="5_jjmjn"]
 [ext_resource type="Texture2D" uid="uid://c0hfwrxu3rgkm" path="res://Objects/Egg item.png" id="5_od1x2"]
+[ext_resource type="Script" path="res://UI_Files/exit_to_homepage.gd" id="6_14odi"]
 [ext_resource type="Script" path="res://Scripts/NameLabel.gd" id="6_bw6y3"]
 
 [node name="Farm" type="Node2D"]
@@ -37,10 +38,19 @@ offset_left = 30.0
 offset_top = 38.0
 offset_right = 276.0
 offset_bottom = 96.0
-theme_override_fonts/font = ExtResource("5_lqamn")
 theme_override_font_sizes/font_size = 40
 text = "asdfasdfasdf"
 script = ExtResource("6_bw6y3")
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+offset_left = 482.0
+offset_top = 52.0
+offset_right = 590.0
+offset_bottom = 160.0
+scale = Vector2(0.4, 0.4)
+icon = ExtResource("5_jjmjn")
+flat = true
+script = ExtResource("6_14odi")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_p0io2")
@@ -50,3 +60,4 @@ position = Vector2(72, 131.25)
 texture = ExtResource("5_od1x2")
 
 [connection signal="createPlant" from="YSortNode/Player" to="." method="_on_player_create_plant"]
+[connection signal="button_down" from="CanvasLayer/Button" to="CanvasLayer/Button" method="_on_button_down"]

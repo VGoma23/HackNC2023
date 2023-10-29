@@ -54,4 +54,4 @@ flat = true
 script = ExtResource("3_ypuxd")
 
 [connection signal="button_down" from="UI/menu_buttons/start" to="UI/menu_buttons/start" method="_on_button_down"]
-[connection signal="button_down" from="UI/menu_buttons/plant_data" to="UI/menu_buttons/start" method="_on_plant_data_button_down"]
+[connection signal="button_down" from="UI/menu_buttons/plant_data" to="UI/menu_buttons/plant_data" method="_on_button_down"]
