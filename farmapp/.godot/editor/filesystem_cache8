@@ -1,0 +1,19 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1698545618
+::res://Data/::1698545587
+VegData.json::JSON::-1::1698545587::0::1::::<><>::
+::res://Fonts/::1698545036
+Retro Gaming.ttf::FontFile::2875181529714369883::1698545004::1698545036::1::::<><>::
+upheavtt.ttf::FontFile::4541539088713184087::1698545004::1698545036::1::::<><>::
+::res://Scenes/::1698545004
+check_plant_data.gd::GDScript::-1::1698545004::0::1::::<>Control<>::
+game.tscn::PackedScene::5788153214226398379::1698545004::0::1::::<><>::uid://b5x7qq72w6l08
+plant_data.tscn::PackedScene::7284616346311554806::1698545004::0::1::::<><>::uid://b5x7qq72w6l08
+tooltip.tscn::PackedScene::8672730735508377343::1698545004::0::1::::<><>::uid://bg7024uqgiwv0
+tooltiptester.tscn::PackedScene::1623028580390717346::1698545004::0::1::::<><>::uid://b5x7qq72w6l08
+::res://Scripts/::1698545587
+backhome.gd::GDScript::-1::1698545004::0::1::::<>Button<>::
+new_script.gd::GDScript::-1::1698545587::0::1::::<>RefCounted<>::
+Start_Button.gd::GDScript::-1::1698545004::0::1::::<>Control<>::
+stats_button.gd::GDScript::-1::1698545004::0::1::::<>Button<>::
+tooltip_expand.gd::GDScript::-1::1698545004::0::1::::<>Button<>::
