@@ -99,9 +99,11 @@ func _unhandled_input(event):
 	if (event is InputEventScreenTouch):
 		if (!isPressed && event.pressed):
 			isPressed = true
+			player.touchMovement = true
 			initialPos = event.position
 		elif (isPressed && !event.pressed):
 			isPressed = false
+			player.touchMovement = false
 			initialPos = null
 			joystickInputVec = Vector2.ZERO
 			player.input_vector = Vector2.ZERO
