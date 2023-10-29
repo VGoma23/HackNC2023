@@ -11,6 +11,7 @@ var positionY: int
 
 var sunCoverage: String
 var daysToMaturity: int
+var plantImagePath: String
 
 @export var DEV_DAY_OFFSET = 0
 
@@ -27,10 +28,11 @@ func _init(plant_name="tomatoes", last_watered=Time.get_datetime_string_from_sys
 			print(wateringInterval)
 			sunCoverage = object["sun_coverage"]
 			daysToMaturity = object["days_to_maturity"]
+			plantImagePath = object["image_link"]
 			break
 		
 	
-	numTimesWatered = numTimesWatered
+	numTimesWatered = num_times_watered
 	positionX = position_x
 	positionY = position_y
 	if cute_name == null:
@@ -47,7 +49,8 @@ func toJSON():
 		"numTimesWatered": numTimesWatered,
 		"plantName": plantName,
 		"positionX": positionX,
-		"positionY": positionY
+		"positionY": positionY,
+		"DEV_DAY_OFFSET": DEV_DAY_OFFSET
 	}
 	return data_to_save
 	

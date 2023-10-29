@@ -1,0 +1,88 @@
+[gd_scene load_steps=7 format=3 uid="uid://pygcn648155h"]
+
+[ext_resource type="Script" path="res://Scripts/plant_data.gd" id="1_4qnf3"]
+[ext_resource type="FontFile" uid="uid://b5x7qq72w6l08" path="res://Fonts/upheavtt.ttf" id="1_44cq6"]
+[ext_resource type="Script" path="res://Scripts/backhome.gd" id="2_byt8c"]
+[ext_resource type="Texture2D" uid="uid://ct0emuwcvmcs4" path="res://Crop_Images/asparagus.jpg" id="2_ybfsr"]
+[ext_resource type="FontFile" uid="uid://be4btiktqbfji" path="res://Fonts/Retro Gaming.ttf" id="3_7824a"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cf7qo"]
+texture = ExtResource("2_ybfsr")
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_4qnf3")
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Background"]
+offset_right = 576.0
+offset_bottom = 1024.0
+color = Color(0.854902, 0.94902, 0.815686, 1)
+
+[node name="UI" type="Node2D" parent="Background/ColorRect"]
+
+[node name="ItemList" type="Panel" parent="Background/ColorRect/UI"]
+offset_left = 24.0
+offset_top = 377.0
+offset_right = 557.0
+offset_bottom = 951.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_cf7qo")
+
+[node name="PanelContainer" type="Panel" parent="Background/ColorRect/UI"]
+offset_left = 22.0
+offset_top = 161.0
+offset_right = 218.0
+offset_bottom = 359.0
+
+[node name="Label" type="RichTextLabel" parent="Background/ColorRect/UI/PanelContainer"]
+layout_mode = 0
+offset_top = -1.0
+offset_right = 196.0
+offset_bottom = 197.0
+theme_override_fonts/normal_font = ExtResource("3_7824a")
+theme_override_font_sizes/normal_font_size = 20
+
+[node name="Menu Buttons" type="Node2D" parent="Background/ColorRect/UI"]
+position = Vector2(0, 300)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Background/ColorRect/UI/Menu Buttons"]
+offset_top = 670.0
+offset_right = 576.0
+offset_bottom = 715.0
+alignment = 1
+
+[node name="Homepage" type="Button" parent="Background/ColorRect/UI/Menu Buttons/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.596078, 0, 1)
+theme_override_colors/font_hover_color = Color(0.392157, 0.47451, 0, 1)
+theme_override_fonts/font = ExtResource("1_44cq6")
+theme_override_font_sizes/font_size = 40
+text = "Home
+"
+flat = true
+script = ExtResource("2_byt8c")
+
+[node name="Label" type="Label" parent="Background/ColorRect/UI"]
+offset_top = 70.0
+offset_right = 576.0
+offset_bottom = 137.0
+theme_override_colors/font_color = Color(0, 0.317647, 0, 1)
+theme_override_fonts/font = ExtResource("1_44cq6")
+theme_override_font_sizes/font_size = 70
+text = "<Plant Name>"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PanelContainer2" type="PanelContainer" parent="Background/ColorRect/UI"]
+offset_left = 228.0
+offset_top = 160.0
+offset_right = 556.0
+offset_bottom = 358.0
+
+[node name="Label" type="RichTextLabel" parent="Background/ColorRect/UI/PanelContainer2"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("3_7824a")
+theme_override_font_sizes/normal_font_size = 20
+
+[connection signal="button_down" from="Background/ColorRect/UI/Menu Buttons/HBoxContainer/Homepage" to="." method="_on_homepage_button_down"]
+[connection signal="button_down" from="Background/ColorRect/UI/Menu Buttons/HBoxContainer/Homepage" to="Background/ColorRect/UI/Menu Buttons/HBoxContainer/Homepage" method="_on_button_down" flags=18]
