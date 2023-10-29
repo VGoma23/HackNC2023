@@ -1,7 +1,9 @@
 # HackNC2023
 
-**The 1st place project of the NC hackathon.**
+**The "Best Farming Simulator" winner of the 2023 NC hackathon.**
 
+
+[Devpost Link](https://devpost.com/software/pocketgarden)
 
 
 
