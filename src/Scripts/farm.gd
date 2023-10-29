@@ -147,6 +147,8 @@ func _unhandled_input(event):
 
 
 func _on_add_plants_send_veggie(veggie_name, cuteName):
+	if cuteName == "":
+		cuteName = null
 	var plantData = Plant.new(veggie_name, Time.get_datetime_string_from_system(), previousPosition.x, previousPosition.y, 0, cuteName)
 	var new_plant = load("res://Elements/plant.tscn").instantiate()
 	$YSortNode/Plants.add_child(new_plant)
