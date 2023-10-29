@@ -11,6 +11,7 @@ var positionY: int
 
 var sunCoverage: String
 var daysToMaturity: int
+var plantImagePath: String
 
 @export var DEV_DAY_OFFSET = 0
 
@@ -27,6 +28,7 @@ func _init(plant_name="tomatoes", last_watered=Time.get_datetime_string_from_sys
 			print(wateringInterval)
 			sunCoverage = object["sun_coverage"]
 			daysToMaturity = object["days_to_maturity"]
+			plantImagePath = object["image_link"]
 			break
 		
 	

@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://58ifcrrvp672"]
+[gd_scene load_steps=10 format=3 uid="uid://58ifcrrvp672"]
 
 [ext_resource type="PackedScene" uid="uid://c0krku52pgcqe" path="res://Tilesets/tile_map.tscn" id="1_25fxa"]
 [ext_resource type="PackedScene" uid="uid://bv3iptxxxmaw8" path="res://player.tscn" id="1_pv1ar"]
 [ext_resource type="Script" path="res://Scripts/farm.gd" id="1_sn0f3"]
+[ext_resource type="PackedScene" uid="uid://pygcn648155h" path="res://plant_data.tscn" id="4_ocsdi"]
 [ext_resource type="AudioStream" uid="uid://dr0hr3nm83m21" path="res://Sound/sakura-hz-watching-anime.mp3" id="4_p0io2"]
 [ext_resource type="FontFile" path="res://Fonts/Retro Gaming.ttf" id="5_lqamn"]
 [ext_resource type="Texture2D" uid="uid://c0hfwrxu3rgkm" path="res://Objects/Egg item.png" id="5_od1x2"]
@@ -40,11 +41,12 @@ offset_right = 276.0
 offset_bottom = 96.0
 theme_override_fonts/font = ExtResource("5_lqamn")
 theme_override_font_sizes/font_size = 40
-text = "asdfasdfasdf"
 script = ExtResource("6_bw6y3")
 
 [node name="TipOfTheDay" parent="CanvasLayer" instance=ExtResource("6_e3pu7")]
 position = Vector2(-30, 69)
+
+[node name="Node2D" parent="CanvasLayer" instance=ExtResource("4_ocsdi")]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_p0io2")

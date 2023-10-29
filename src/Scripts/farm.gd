@@ -17,6 +17,7 @@ func _process(delta):
 	pass
 
 func inspectPlantUI(plant):
+	$CanvasLayer/Node2D.show_menu(plant)
 	print("pull up plant UI")
 
 

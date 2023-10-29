@@ -3,120 +3,140 @@
    "crop": "tomatoes",
    "water_every_n_days": 2,
    "sun_coverage": "full sun",
-   "days_to_maturity": 80
+   "days_to_maturity": 80,
+   "image_link": "res://Crop_Images/tomatoes.jpg"
  },
  {
    "crop": "radish",
    "water_every_n_days": 3,
    "sun_coverage": "full sun",
-   "days_to_maturity": 40
+   "days_to_maturity": 40,
+   "image_link": "res://Crop_Images/radish.jpg"
  },
  {
    "crop": "cucumber",
    "water_every_n_days": 5,
    "sun_coverage": "full sun",
-   "days_to_maturity": 60
+   "days_to_maturity": 60,
+   "image_link": "res://Crop_Images/cucumber.jpg"
  },
  {
    "crop": "carrots",
    "water_every_n_days": 2,
    "sun_coverage": "full sun",
-   "days_to_maturity": 70
+   "days_to_maturity": 70,
+   "image_link": "res://Crop_Images/carrots.jpg"
  },
  {
    "crop": "lettuce",
    "water_every_n_days": 5,
    "sun_coverage": "full sun",
-   "days_to_maturity": 50
+   "days_to_maturity": 50,
+   "image_link": "res://Crop_Images/lettuce.jpg"
  },
  {
    "crop": "spinach",
    "water_every_n_days": 2,
    "sun_coverage": "light shade",
-   "days_to_maturity": 40
+   "days_to_maturity": 40,
+   "image_link": "res://Crop_Images/spinach.jpg"
  },
  {
    "crop": "cabbage",
    "water_every_n_days": 7,
    "sun_coverage": "full sun",
-   "days_to_maturity": 135
+   "days_to_maturity": 135,
+   "image_link": "res://Crop_Images/cabbage.jpg"
  },
  {
    "crop": "beets",
    "water_every_n_days": 7,
    "sun_coverage": "full sun",
-   "days_to_maturity": 60
+   "days_to_maturity": 60,
+   "image_link": "res://Crop_Images/beets.jpg"
  },
  {
    "crop": "peas",
    "water_every_n_days": 7,
    "sun_coverage": "full sun",
-   "days_to_maturity": 60
+   "days_to_maturity": 60,
+   "image_link": "res://Crop_Images/peas.jpg"
  },
  {
    "crop": "green beans",
    "water_every_n_days": 3,
    "sun_coverage": "full sun",
-   "days_to_maturity": 55
+   "days_to_maturity": 55,
+   "image_link": "res://Crop_Images/green beans.jpg"
  },
  {
    "crop": "potatoes",
    "water_every_n_days": 5,
    "sun_coverage": "full sun",
-   "days_to_maturity": 80
+   "days_to_maturity": 80,
+   "image_link": "res://Crop_Images/potatoes.jpg"
  },
  {
    "crop": "onions",
    "water_every_n_days": 5,
    "sun_coverage": "full sun",
-   "days_to_maturity": 100
+   "days_to_maturity": 100,
+   "image_link": "res://Crop_Images/onions.jpg"
  },
  {
    "crop": "turnips",
    "water_every_n_days": 4,
    "sun_coverage": "full sun",
-   "days_to_maturity": 50
+   "days_to_maturity": 50,
+   "image_link": "res://Crop_Images/turnips.jpg"
  },
  {
    "crop": "brussel sprouts",
    "water_every_n_days": 7,
    "sun_coverage": "full sun",
-   "days_to_maturity": 110
+   "days_to_maturity": 110,
+   "image_link": "res://Crop_Images/brussel sprouts.jpg"
  },
  {
    "crop": "peppers",
    "water_every_n_days": 7,
    "sun_coverage": "full sun",
-   "days_to_maturity": 80
+   "days_to_maturity": 80,
+   "image_link": "res://Crop_Images/peppers.jpg"
  },
  {
    "crop": "pumpkin",
    "water_every_n_days": 3,
    "sun_coverage": "full sun",
-   "days_to_maturity": 120
+   "days_to_maturity": 120,
+   "image_link": "res://Crop_Images/pumpkin.jpg"
  },
  {
    "crop": "okra",
    "water_every_n_days": 7,
    "sun_coverage": "full sun",
-   "days_to_maturity": 60
+   "days_to_maturity": 60,
+   "image_link": "res://Crop_Images/okra.jpg"
  },
  {
    "crop": "broccoli",
    "water_every_n_days": 4,
    "sun_coverage": "full sun",
-   "days_to_maturity": 70
+   "days_to_maturity": 70,
+   "image_link": "res://Crop_Images/broccoli.jpg"
  },
  {
    "crop": "asparagus",
    "water_every_n_days": 4,
    "sun_coverage": "full sun",
-   "days_to_maturity": 1000
+   "days_to_maturity": 1000,
+   "image_link": "res://Crop_Images/asparagus.jpg"
  },
  {
    "crop": "swiss chard",
    "water_every_n_days": 4,
    "sun_coverage": "full sun",
-   "days_to_maturity": 60
+   "days_to_maturity": 60,
+   "image_link": "res://Crop_Images/swiss chard.jpg"
  }
 ]
