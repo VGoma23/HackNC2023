@@ -4,13 +4,22 @@ extends Object
 var lastWateredDate: String
 var wateringInterval: int
 var plantName: String
+var numTimesWatered: int
+var cuteName: String
+
 
 @export var DEV_DAY_OFFSET = 0
 
-func _init(plant_name, last_watered, watering_interval):
+func _init(plant_name, last_watered, watering_interval, num_times_watered = 0, cute_name = null):
 	lastWateredDate = last_watered
 	wateringInterval = watering_interval
 	plantName = plant_name
+	numTimesWatered = numTimesWatered
+	if cute_name == null:
+		cuteName= plantName
+	else:
+		cuteName = cute_name
+		
 
 func toJSON():
 	pass
@@ -83,4 +92,4 @@ func days_between(date1: Dictionary, date2: Dictionary) -> int:
 		remaining_months -= 1
 
 	# Days left in the first year + days in the last year + days for full years in between
-	return days_count + remaining_days
+	return abs(days_count + remaining_days)

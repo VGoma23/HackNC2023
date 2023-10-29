@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://b5yflf6lr7d3p"]
+[gd_scene load_steps=3 format=3 uid="uid://b5yflf6lr7d3p"]
 
 [ext_resource type="FontFile" uid="uid://b5x7qq72w6l08" path="res://Fonts/upheavtt.ttf" id="1_jr2st"]
+[ext_resource type="Script" path="res://Scripts/game.gd" id="1_w7175"]
 
 [node name="Game" type="Node2D"]
+script = ExtResource("1_w7175")
 
 [node name="Background" type="Node2D" parent="."]
 
@@ -63,3 +65,5 @@ theme_override_fonts/font = ExtResource("1_jr2st")
 theme_override_font_sizes/font_size = 40
 text = "TBD"
 flat = true
+
+[connection signal="pressed" from="UI/Menu Buttons/Start" to="." method="_on_start_pressed"]
