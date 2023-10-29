@@ -6,15 +6,19 @@ var wateringInterval: int
 var plantName: String
 var numTimesWatered: int
 var cuteName: String
+var positionX: int
+var positionY: int
 
 
 @export var DEV_DAY_OFFSET = 0
 
-func _init(plant_name, last_watered, watering_interval, num_times_watered = 0, cute_name = null):
+func _init(plant_name, last_watered, watering_interval,  position_x, position_y, num_times_watered = 0, cute_name = null,):
 	lastWateredDate = last_watered
 	wateringInterval = watering_interval
 	plantName = plant_name
 	numTimesWatered = numTimesWatered
+	positionX = position_x
+	positionY = position_y
 	if cute_name == null:
 		cuteName= plantName
 	else:
@@ -22,7 +26,18 @@ func _init(plant_name, last_watered, watering_interval, num_times_watered = 0, c
 		
 
 func toJSON():
-	pass
+	var data_to_save = {
+		"cuteName": cuteName,
+		"lastWateredDate": lastWateredDate,
+		"wateringInterval": wateringInterval,
+		"numTimesWatered": numTimesWatered,
+		"plantName": plantName,
+		"positionX": positionX,
+		"positionY": positionY
+	}
+	return data_to_save
+	
+	
 func createFromJSON():
 	pass
 

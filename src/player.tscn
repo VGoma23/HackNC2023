@@ -1,9 +1,8 @@
-[gd_scene load_steps=31 format=3 uid="uid://ceo8g0sxdlxjl"]
+[gd_scene load_steps=30 format=3 uid="uid://bv3iptxxxmaw8"]
 
 [ext_resource type="Texture2D" uid="uid://b6uidkmq4sed5" path="res://Characters/Basic Charakter Spritesheet.png" id="1_brjvq"]
 [ext_resource type="Script" path="res://player.gd" id="1_bunp3"]
 [ext_resource type="Script" path="res://Interactible Collision.gd" id="3_evvdc"]
-[ext_resource type="Texture2D" uid="uid://ra86wpyiebbi" path="res://Objects/16x16_Highlight.png" id="4_i7eek"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bytve"]
 radius = 2.0
@@ -376,14 +375,8 @@ parameters/Walk/blend_position = Vector2(0, 0)
 position = Vector2(0, 6)
 
 [node name="Area2D" type="Area2D" parent="Interact Node"]
-position = Vector2(12, 0)
 
 [node name="Interactible Collision" type="CollisionShape2D" parent="Interact Node/Area2D"]
+position = Vector2(16, 0)
 shape = SubResource("RectangleShape2D_orplr")
-disabled = true
 script = ExtResource("3_evvdc")
-
-[node name="16x16Highlight" type="Sprite2D" parent="Interact Node/Area2D/Interactible Collision"]
-modulate = Color(1, 1, 1, 0.45098)
-texture = ExtResource("4_i7eek")
-region_filter_clip_enabled = true
