@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://c0krku52pgcqe"]
+[gd_scene load_steps=2 format=3 uid="uid://hfg7hgjfnyf2"]
 
-[ext_resource type="TileSet" uid="uid://cjg3l2wfuyuuy" path="res://Tilesets/grassTileSet.tres" id="1_v7cut"]
+[ext_resource type="TileSet" uid="uid://cm02xq7kc3u6i" path="res://Tilesets/grassTileSet.tres" id="1_v7cut"]
 
 [node name="TileMap" type="TileMap"]
 position = Vector2(114, 80)
