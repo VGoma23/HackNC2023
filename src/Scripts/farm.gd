@@ -138,11 +138,11 @@ func _unhandled_input(event):
 			initialPos = null
 			joystickInputVec = Vector2.ZERO
 			player.input_vector = Vector2.ZERO
-		print(isPressed)
+#		print(isPressed)
 	elif (event is InputEventScreenDrag):
 		joystickInputVec = event.position - initialPos
 		joystickInputVec = joystickInputVec.limit_length(maxLength) / maxLength
-		print(joystickInputVec)
+#		print(joystickInputVec)
 		player.input_vector = joystickInputVec
 
 
