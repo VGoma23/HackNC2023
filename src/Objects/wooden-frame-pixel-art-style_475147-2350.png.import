@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3fqcl6dfa3vy"
-path="res://.godot/imported/pumpkin.jpg-fa257b8310a90950bf1f44f63f4597b1.ctex"
+uid="uid://b0cgl0u8f8alu"
+path="res://.godot/imported/wooden-frame-pixel-art-style_475147-2350.png-77075c26628038d0f7abd78b25a73393.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Crop_Images/pumpkin.jpg"
-dest_files=["res://.godot/imported/pumpkin.jpg-fa257b8310a90950bf1f44f63f4597b1.ctex"]
+source_file="res://Objects/wooden-frame-pixel-art-style_475147-2350.png"
+dest_files=["res://.godot/imported/wooden-frame-pixel-art-style_475147-2350.png-77075c26628038d0f7abd78b25a73393.ctex"]
 
 [params]
 
